@@ -50,8 +50,9 @@ Transformer-:
 
 7. Add & Norm
 > The Add & Norm operation stabilizes the training process:
-    > - Add: Residual connections ensure gradient flow, preventing vanishing gradients.
-    > - Norm: Layer normalization standardizes intermediate outputs, improving model stability.
+
+> - Add: Residual connections ensure gradient flow, preventing vanishing gradients.
+> - Norm: Layer normalization standardizes intermediate outputs, improving model stability.
 
 8. Masking
 > Transformers employ masking to handle padding and sequential dependencies:
