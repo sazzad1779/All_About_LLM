@@ -30,11 +30,14 @@ Transformer-:
 > The decoder predicts one token at a time, iteratively refining its output.
 
 3. Self-Attention Mechanism
+>Identifies relationships within the input sequence by comparing every token to every other token.
+
 > The self-attention mechanism is the core innovation of Transformers. It computes relationships between all tokens in a sequence, allowing the model to focus on the most relevant parts.
 
 > This mechanism enables the model to dynamically weigh tokens, capturing long-range dependencies effectively.
     
 4. Multi-Head Attention
+
 > Instead of calculating a single attention score, multi-head attention uses multiple attention "heads" to capture various aspects of the input relationships. Each head operates independently, enhancing the model's ability to understand complex patterns.
     
 5. Positional Encoding
@@ -43,12 +46,16 @@ Transformer-:
 > This encoding ensures the model understands the sequence order.
     
 6. Feedforward Neural Network (FFN)
+> Adds non-linearity and refines intermediate representations.
+
 >   Each token's representation is independently processed through a feedforward neural network:
 > - A linear transformation to increase dimensionality.
 > - A non-linear activation function (e.g., ReLU).
 > - Another linear transformation back to the original dimension.
 
 7. Add & Norm
+>Stabilizes learning by adding residual connections and applying layer normalization.
+
 > The Add & Norm operation stabilizes the training process:
 
 > - Add: Residual connections ensure gradient flow, preventing vanishing gradients.
@@ -235,5 +242,12 @@ Predicted word is fed back in:
 Input:   "The cat sat on the mat"
 Output:  "Le chat s'est assis sur le tapis"
 ```
-
 ---
+
+### Advantages of Transformers
+
+- Parallelization: Unlike RNNs, Transformers process sequences in parallel, enabling faster training.
+
+- Long-Range Dependencies: The self-attention mechanism excels at capturing relationships between distant tokens.
+
+- Scalability: Transformers can handle large-scale data and billions of parameters.
