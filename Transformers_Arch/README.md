@@ -251,3 +251,7 @@ Output:  "Le chat s'est assis sur le tapis"
 - Long-Range Dependencies: The self-attention mechanism excels at capturing relationships between distant tokens.
 
 - Scalability: Transformers can handle large-scale data and billions of parameters.
+
+
+## References
+- https://freedium.cfd/https://medium.com/@siladityaghosh/understanding-transformers-the-backbone-of-modern-ai-c6b8e27c5ab5
