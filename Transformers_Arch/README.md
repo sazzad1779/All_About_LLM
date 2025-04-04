@@ -58,3 +58,6 @@ Transformer-:
 > Transformers employ masking to handle padding and sequential dependencies:
 > - Padding Mask: Ignores padded tokens during attention calculations.
 > - Look-Ahead Mask: Prevents the decoder from accessing future tokens during training.
+
+9. Input Embedding
+> Convert input ids to embedding vectors
