@@ -1,0 +1,33 @@
+{
+    "model_arguments": {
+      "model_name_or_path": "facebook/opt-1.3b",
+      "tokenizer_name_or_path": "facebook/opt-1.3b",
+      "torch_dtype": "bfloat16",
+      "low_cpu_mem_usage": true
+    },
+    "data_training_arguments": {
+      "dataset_dir": "./data/text_corpus",
+      "block_size": 512,
+      "preprocessing_num_workers": 8,
+      "data_cache_dir": "./cached_datasets"
+    },
+    "training_arguments": {
+      "output_dir": "./results/opt-1.3b-finetuned",
+      "num_train_epochs": 3,
+      "per_device_train_batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 2e-5,
+      "warmup_steps": 100,
+      "load_in_kbits": 8,
+      "lora_rank": 16,
+      "trainable": "q_proj,v_proj,k_proj",
+      "logging_steps": 10,
+      "save_steps": 200,
+      "evaluation_strategy": "steps",
+      "eval_steps": 200,
+      "full_finetuning": false,
+      "fp16": true,
+      "do_train": true,
+      "do_eval": true
+    }
+  }
